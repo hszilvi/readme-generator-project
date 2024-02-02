@@ -21,21 +21,30 @@ const questions = [
     //     message: 'Please choose your table of content:',
     //     choices: ['Description', 'Installation', 'Usage', 'Licence', 'Contributing', 'Tests', 'Questions', 'Sources', 'Author']
     // },
+    {
+        type: 'list',
+        name: 'licence',
+        message: 'What licence do you want to add to your readme?',
+        choces: ['Apache', 'GNU', 'MIT', 'BSD', 'Boost Software License', 'Creative common Zero', 'Eclipse Publik Licence', 'GNU' ]
+    },
     // {
     //     type: '',
     //     name: '',
     //     message: '',
     // },
-    // {
-    //     type: '',
-    //     name: '',
-    //     message: '',
-    // },
-    // {
-    //     type: '',
-    //     name: '',
-    //     message: '',
-    // }
+    {
+        type: 'input',
+        name: 'gitUser',
+        message: 'Add your github username:',
+        validate: gitHubUserInput => {
+            // (gitHubUserInput) ? true : console.log('answer')
+            if (gitHubUserInput) {
+                return true;
+            } else {
+                console.log('answer it')
+            }
+        }
+    }
 
 ];
 

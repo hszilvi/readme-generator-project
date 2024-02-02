@@ -4,6 +4,7 @@ function generateMarkdown(data) {
   ## Table of Content
   ## Decription
   ${data.description} 
+  github https://github.com/${data.gitUser};
 
 
 `;
