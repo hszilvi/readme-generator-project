@@ -22,11 +22,27 @@ const questions = [
         type: 'input',
         name: 'title',
         message: 'Please add a name to your project:',
+        validate: titleUserInput => {
+            // (gitHubUserInput) ? true : console.log('answer')
+            if (titleUserInput) {
+                return true;
+            } else {
+                console.log('Add a name to your project:')
+            }
+        }
     },
     {
         type: 'input',
         name: 'description',
         message: 'Please, add a short description:',
+        validate: descriptionUserInput => {
+            // (gitHubUserInput) ? true : console.log('answer')
+            if (descriptionUserInput) {
+                return true;
+            } else {
+                console.log('Add a short description to your readme file:')
+            }
+        }
     },
     // {
     //     type: 'checkbox',
@@ -34,6 +50,11 @@ const questions = [
     //     message: 'Please choose your table of content:',
     //     choices: ['Description', 'Installation', 'Usage', 'Licence', 'Contributing', 'Tests', 'Questions', 'Sources', 'Author']
     // },
+    {
+        type: 'input',
+        name: 'installation',
+        message: 'Please provide instruction for installation!'
+    },
     {
         type: 'input',
         name: 'usage',
@@ -53,7 +74,7 @@ const questions = [
     {
         type: 'input',
         name: 'test',
-        message: 'Plase add tests info to your readme!',
+        message: 'Plase add tests information to your readme file!',
     },
     {
         type: 'input',
@@ -64,9 +85,15 @@ const questions = [
             if (gitHubUserInput) {
                 return true;
             } else {
-                console.log('answer it')
+                console.log('Add your github username!')
             }
         }
+    },
+    {
+        type: 'input',
+        name: 'questions',
+        message: 'Add your contact email address:',
+
     }
 
 ];
