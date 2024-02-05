@@ -1,12 +1,12 @@
-# jonas
-  {GNU license} ((https://img.shields.io/badge/License-GNU-blue.svg))
+# hello
+  [![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)
   ## Table of Content
   ## Decription
-  jonascaty 
+  bello 
 
-  ## github [https://github.com/gaty]
+  ## github [https://github.com/hszilvi]
 
   ## License
-    This project is covered under GNU license.
+    This project is covered under Boost Software License license.
 
 

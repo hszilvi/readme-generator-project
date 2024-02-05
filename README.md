@@ -90,6 +90,10 @@ You are required to submit the following for review:
 
 © 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
 
+![edX](https://img.shields.io/badge/edX-%2302262B.svg?style=for-the-badge&logo=edX&logoColor=white)
 
 npm i inquirer@8.2.4
 https://www.npmjs.com/package/badge-maker
+
+source: 
+https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba

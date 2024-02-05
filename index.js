@@ -38,7 +38,7 @@ const questions = [
         type: 'list',
         name: 'license',
         message: 'What licence do you want to add to your readme?',
-        choices: ['Apache', 'GNU', 'MIT', 'BSD', 'Boost Software License', 'Creative common Zero', 'Eclipse Publik Licence', 'GNU', 'No license'],
+        choices: ['Apache', 'GNU', 'MIT', 'BSD', 'Boost Software License', 'Creative common Zero', 'Eclipse Publik Licence', 'No license'],
         // look: badgeMaker.format
     },
     // {
