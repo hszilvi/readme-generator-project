@@ -35,17 +35,26 @@ const questions = [
     //     choices: ['Description', 'Installation', 'Usage', 'Licence', 'Contributing', 'Tests', 'Questions', 'Sources', 'Author']
     // },
     {
+        type: 'input',
+        name: 'usage',
+        message: 'Please add usage of your repo!'
+    },
+    {
         type: 'list',
         name: 'license',
         message: 'What licence do you want to add to your readme?',
         choices: ['Apache', 'GNU', 'MIT', 'BSD', 'Boost Software License', 'Creative common Zero', 'Eclipse Publik Licence', 'No license'],
-        // look: badgeMaker.format
     },
-    // {
-    //     type: '',
-    //     name: '',
-    //     message: '',
-    // },
+    {
+        type: 'input',
+        name: 'contributing',
+        message: 'Plase add contributing info to your readme!',
+    },
+    {
+        type: 'input',
+        name: 'test',
+        message: 'Plase add tests info to your readme!',
+    },
     {
         type: 'input',
         name: 'gitUser',
@@ -74,7 +83,7 @@ function writeToFile(fileName, data) {
 function init() {
     inquirer.prompt(questions)
     .then(responses => 
-        {writeToFile('generated.md', generateMarkdown({...responses}))})
+        {writeToFile('./output/generated.md', generateMarkdown({...responses}))})
     // .then(writeToFile())
 
 }

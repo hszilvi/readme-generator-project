@@ -41,12 +41,21 @@ function generateMarkdown(data) {
   return `# ${data.title}
   ${renderLicenseBadge(data.license)}
   ## Table of Content
+
   ## Decription
   ${data.description} 
 
+  ## Usage 
+  ${data.usage}
+
+  ## License
+  ${renderLicenseContent(data.license)}
+
+  ## Contributing
+
   ## github [https://github.com/${data.gitUser}]
 
-  ${renderLicenseContent(data.license)}
+  
 
 
 `;
