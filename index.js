@@ -1,20 +1,7 @@
 const fs = require("fs");
-const path = require('path'); // path module provides utility functions for working with file and dir paths - path.join or path.normalize??? better this than working with strings
-// need an output folder where there will be a generated readme
-// const badge = require('badge-maker');
-// const format = {
-//   label: 'build',
-//   message: 'passed',
-//   labelColor: '#555',
-//   color: '#4c1',
-//   style: 'flat'
-// }
-// const svg = badge(format);
-// console.log(svg);
-// console.log('fs' + fs)
-// console.log('path' + path)
+
 const inquirer = require("inquirer");
-const generateMarkdown = require("./utils/generateMarkdown"); // assume this is the html 
+const generateMarkdown = require("./utils/generateMarkdown"); 
 
 // array of questions for user
 const questions = [
@@ -23,11 +10,10 @@ const questions = [
         name: 'title',
         message: 'Please add a name to your project:',
         validate: titleUserInput => {
-            // (gitHubUserInput) ? true : console.log('answer')
             if (titleUserInput) {
                 return true;
             } else {
-                console.log('Add a name to your project:')
+                console.log('(Project name is compulsory!)')
             }
         }
     },
@@ -36,20 +22,13 @@ const questions = [
         name: 'description',
         message: 'Please, add a short description:',
         validate: descriptionUserInput => {
-            // (gitHubUserInput) ? true : console.log('answer')
             if (descriptionUserInput) {
                 return true;
             } else {
-                console.log('Add a short description to your readme file:')
+                console.log('(Description is compulsory!)')
             }
         }
     },
-    // {
-    //     type: 'checkbox',
-    //     name: 'tableOfContent',
-    //     message: 'Please choose your table of content:',
-    //     choices: ['Description', 'Installation', 'Usage', 'Licence', 'Contributing', 'Tests', 'Questions', 'Sources', 'Author']
-    // },
     {
         type: 'input',
         name: 'installation',
@@ -81,11 +60,10 @@ const questions = [
         name: 'gitUser',
         message: 'Add your github username:',
         validate: gitHubUserInput => {
-            // (gitHubUserInput) ? true : console.log('answer')
             if (gitHubUserInput) {
                 return true;
             } else {
-                console.log('Add your github username!')
+                console.log('Github username is compulsory!')
             }
         }
     },
@@ -93,17 +71,13 @@ const questions = [
         type: 'input',
         name: 'questions',
         message: 'Add your contact email address:',
-
     }
-
 ];
 
 // function to write README file
 function writeToFile(fileName, data) {
     return fs.writeFile(fileName, data, err =>
     err ? console.log(err) : console.log('generatedReadme.md file is generated') )
-    // return fs.writeFile(path.join('./'), fileName, data);
-
 }
 
 // function to initialize program
@@ -111,8 +85,6 @@ function init() {
     inquirer.prompt(questions)
     .then(responses => 
         {writeToFile('./output/generated.md', generateMarkdown({...responses}))})
-    // .then(writeToFile())
-
 }
 
 // function call to initialize program

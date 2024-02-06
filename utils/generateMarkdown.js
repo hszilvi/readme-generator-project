@@ -68,7 +68,9 @@ function renderQuestionContent(questions) {
     return `Contact me via email: [${questions}]`
   }
 }
-
+//     ---------------------------------------
+//     | function to generate readme content |
+//     ---------------------------------------
 function generateMarkdown(data) {
   return `
   # ${data.title}
