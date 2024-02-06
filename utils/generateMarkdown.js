@@ -63,7 +63,7 @@ function renderTestContent(test) {
 }
 function renderQuestionContent(questions) {
   if (!questions) {
-    return `Don't email me!`;
+    return `Contact me on github!`;
   } else {
     return `Contact me via email: [${questions}]`
   }

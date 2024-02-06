@@ -17,13 +17,14 @@ Create a readme.md generator that accepts user input from command-line applicati
 When a user is prompted for information about the application repository then a high-quality, professional README.md is generated with (title, description, table of contents, installation, usage, licence, contributing, tests and questions)
 
 ## Screenshots
-![generated readme](.)
+![generated readme](./assets/images/Screenshot-working-readme.png)
+[questions in terminal](./assets/images/Screenshot%20missing%20answers.png)
 
 ## Video
-[show how the site works]()
+[show how the site works](https://youtu.be/jEW29kwhwrM)
 
 ## Links
-the github page of the soluton [https://github.com/hszilvi/readme-generator-project/tree/main]
+the github page of the solution [https://github.com/hszilvi/readme-generator-project]
 
 ### Built_with
 Javascript, Node, VS code
