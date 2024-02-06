@@ -21,7 +21,7 @@ When a user is prompted for information about the application repository then a 
 [questions in terminal](./assets/images/Screenshot%20missing%20answers.png)
 
 ## Video
-[show how the site works](https://youtu.be/jEW29kwhwrM)
+[show how the readme generator works](https://youtu.be/jEW29kwhwrM)
 
 ## Links
 the github page of the solution [https://github.com/hszilvi/readme-generator-project]
